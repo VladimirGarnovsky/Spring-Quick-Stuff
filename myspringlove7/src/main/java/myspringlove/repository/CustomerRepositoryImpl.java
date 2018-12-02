@@ -3,8 +3,12 @@ package myspringlove.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import myspringlove.model.Customer;
 
+
+@Repository("customerRepository")
 public class CustomerRepositoryImpl implements CustomerRepository {
 	List<Customer> customers = new ArrayList<>();
 	

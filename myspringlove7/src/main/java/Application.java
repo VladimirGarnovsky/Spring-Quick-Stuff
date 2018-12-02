@@ -1,7 +1,7 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.vovex.service.UserService;
+
 
 import myspringlove.service.CustomerService;
 import myspringlove.service.CustomerServiceImpl;
