@@ -1,9 +1,7 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.pluralsight.service.CustomerService;
 import com.vladimir.service.UserService;
-import com.vladimir.service.UserServiceImpl;
 
 public class Application {
 

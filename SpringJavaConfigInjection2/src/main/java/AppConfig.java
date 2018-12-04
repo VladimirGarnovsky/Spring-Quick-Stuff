@@ -14,8 +14,7 @@ public class AppConfig {
 	}
 	@Bean(name="userService")
 	public UserService getUserService() {
-		UserServiceImpl service = new UserServiceImpl();
-		service.setUserRepository(getUserRepository());
+		UserServiceImpl service = new UserServiceImpl(getUserRepository());
 		
 		return service;
 	}
