@@ -4,13 +4,16 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	
-	<bean name="yanCustomer"
-		  class="myspringlove.model.Customer">
-	<property name="name" value="Yan"></property>	
-	<property name="age" value="14"></property>	  
-	</bean>
-	<context:annotation-config />
-	<context:component-scan base-package="myspringlove"></context:component-scan>
 
+	<context:property-placeholder location="app.properties"/>
+	
+	<bean name="customerRepository" 
+		  class="com.pluralsight.repository.HibernateCustomerRepositoryImpl">
+		  <property name="dbUsername" value="${dbUsername}" />
+	</bean>
+	<bean name="customerService"
+		  class="com.pluralsight.service.CustomerServiceImpl"  autowire="byName">		
+		  <!--   <constructor-arg index="0" ref="customerRepository" /> -->
+		  
+	</bean>
 </beans>
